@@ -54,7 +54,7 @@ exports.getPost = (data, callback) => {
   
         if (results.length > 0) {
           db.query(
-            "select * from post where userId =? and isDelete = 0",
+            "select * from post where userId =? and isDelete =0",
             [data.userId],
             (error, results, fields) => {
               if (error) {

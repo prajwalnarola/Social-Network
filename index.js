@@ -9,6 +9,7 @@ const followRoutes = require("./routes/follow.routes");
 const postRoutes = require("./routes/post.routes");
 const commentRoutes = require("./routes/comments.routes");
 const messageRoutes = require("./routes/message.routes");
+const savedPostRoutes = require("./routes/savedPosts.routes");
 
 
 // app.use("/demo", (req, res)=>{
@@ -23,6 +24,8 @@ app.use("/follow", followRoutes);
 app.use("/post", postRoutes);
 app.use("/comment", commentRoutes);
 app.use("/message",messageRoutes);
+app.use("/savedPost",savedPostRoutes);
+
 
 app.listen(3000, () => {
   console.log("I'm ready to listen you on 3000");
