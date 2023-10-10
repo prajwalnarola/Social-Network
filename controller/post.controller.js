@@ -28,7 +28,7 @@ exports.addPost = (req, res, next) => {
 
 exports.getPost = (req, res, next) => {
     const data = {
-      userId: req.body.userId
+      userId: req.query.userId
     };
     postServices.getPost(data, (error, result) => {
       if (error) {
@@ -60,7 +60,7 @@ exports.getPost = (req, res, next) => {
 
   exports.deletePost = (req, res, next) => {
     const data = {
-        postId: req.body.postId
+        postId: req.query.postId
     };
     postServices.deletePost(data, (error, result) => {
       if (error) {

@@ -42,9 +42,9 @@ exports.sendMessage = (req, res, next) => {
 
 exports.retrieveMessage = (req, res, next) => {
     const data = {
-        chatId: req.body.chatId,
-        senderUserId: req.body.senderUserId,
-        recieverUserId: req.body.recieverUserId,
+        chatId: req.query.chatId,
+        senderUserId: req.query.senderUserId,
+        recieverUserId: req.query.recieverUserId,
     };
     messageServices.retrieveMessage(data, (error, result) =>{
         if(error){

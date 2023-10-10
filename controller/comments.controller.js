@@ -21,7 +21,7 @@ exports.addComment = (req, res, next) => {
 
 exports.getComment = (req, res, next) => {
     const data = {
-        postId: req.body.postId
+        postId: req.query.postId
     };
     commentServices.getComment(data, (error, result) =>{
         if(error){
@@ -37,7 +37,7 @@ exports.getComment = (req, res, next) => {
 
 exports.getCommentCount = (req, res, next) => {
     const data = {
-        postId: req.body.postId
+        postId: req.query.postId
     };
     commentServices.getCommentCount(data, (error, result) =>{
         if(error){
