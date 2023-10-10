@@ -83,7 +83,7 @@ exports.deleteComment = (req, res, next) => {
         }
         return res.status(200).send({
             status: 1,
-            message: "Comment updated successfully",
+            message: "Comment deleted successfully",
             data: result
         });
     });

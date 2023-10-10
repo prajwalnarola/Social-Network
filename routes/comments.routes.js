@@ -4,7 +4,7 @@ const express = require("express");
 
 const router = express.Router();
 
-router.post("/addComament", commentContoller.addComment);
+router.post("/addComment", commentContoller.addComment);
 router.get("/getComment", commentContoller.getComment);
 router.get("/getCommentCount", commentContoller.getCommentCount);
 router.put("/updateComment", commentContoller.updateComment);
